@@ -103,10 +103,10 @@ func mapLetter(c rune) (s string) {
 		return "--··--"
 	case '?':
 		return "··--··"
-	case '\'':
-		return "·----·"
 	case '!':
 		return "-·-·--"
+	case '-':
+		return "-····-"
 	default:
 		return "☹"
 	}
