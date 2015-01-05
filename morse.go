@@ -7,8 +7,11 @@ import (
 )
 
 func main() {
-  // Loop through each letter and print out the morse equivalent
-	for _, c := range os.Args[1] {
+	convert(os.Args[1])
+}
+
+func convert(i string) {
+	for _, c := range i {
 		fmt.Print(mapLetter(unicode.ToLower(c)))
 		fmt.Print(" ")
 	}
