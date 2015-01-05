@@ -7,15 +7,18 @@ import (
 )
 
 func main() {
-	convert(os.Args[1])
+	fmt.Print( convert( os.Args[1] ), "\n" )
 }
 
-func convert(i string) {
+func convert(i string) string {
+	o := ""
 	for _, c := range i {
-		fmt.Print(mapLetter(unicode.ToLower(c)))
-		fmt.Print(" ")
+		if (o != "") {
+			o += " "
+		}
+		o += mapLetter( unicode.ToLower(c) )
 	}
-	fmt.Print("\n")
+	return o
 }
 
 func mapLetter(c rune) (s string) {
