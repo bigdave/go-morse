@@ -28,7 +28,7 @@ func TestConvert(t *testing.T) {
 	}
 	result = convert("(){}")
 	if result != "☹ ☹ ☹ ☹" {
-		t.Log("Expected '☹☹☹☹' but got ", result)
+		t.Log("Expected '☹ ☹ ☹ ☹' but got ", result)
 		t.FailNow()
 	}
 }
