@@ -7,16 +7,16 @@ import (
 )
 
 func main() {
-	fmt.Print( convert( os.Args[1] ), "\n" )
+	fmt.Print(convert(os.Args[1]), "\n")
 }
 
 func convert(i string) string {
 	o := ""
 	for _, c := range i {
-		if (o != "") {
+		if o != "" {
 			o += " "
 		}
-		o += mapLetter( unicode.ToLower(c) )
+		o += mapLetter(unicode.ToLower(c))
 	}
 	return o
 }
